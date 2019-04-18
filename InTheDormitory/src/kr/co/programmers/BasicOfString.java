@@ -14,25 +14,24 @@ public class BasicOfString {
 		boolean answer = true;
 		char[] charr = {};
 		String string = s;
-		charr = string.toCharArray();
-		
-		for (int i = 0; i < string.length(); i++) {
-		
-			int a = charr[i];  //0 ~ 9 = 48 ~ 57
-			
-			if (a < 47 && a > 58) {
-				answer = false;
+		if (s.length() > 0 && s.length() < 9) {
+			charr = string.toCharArray();
+			for (int i = 0; i < string.length(); i++) {
+				int a = charr[i]; // 0 ~ 9 = 48 ~ 57
+				if (a < 48 || a > 57) {
+					answer = false;
+				}
 			}
-			if (a > 47 && a < 58) {
-				answer = true;
-			}
+			return answer;
+		} else {
+			System.out.println(s.length()+"글자 입니다");
+			System.out.println("1 ~ 8자 를 넣어주세요");
+			return false;
 		}
-		
-		return answer;	
 	}
 
 	public static void main(String[] args) {
 		BasicOfString bos = new BasicOfString();
-		System.out.println(bos.solution("abcd"));
+		System.out.println(bos.solution("1234567a"));
 	}
 }
