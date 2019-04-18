@@ -9,19 +9,45 @@ package kr.co.programmers;
 
 
 public class BasicOfString {
-	
+// 일단 문자열의 수를 알아야함
+// 그리고 숫자인지 문자인지를 알아야함, 모두 숫자여야 True
 	public boolean solution(String s) {
 		boolean answer = true;
+		int string = 0;
 		
-		      
-		      
+		for (int i = 0; i <= s.length(); i++) {
+			
+		}
+		
+		
+		if (s.length() > 0 && s.length() < 9) {
+			string = Integer.parseInt(s);
+			answer = true;
+			
+		} else {
+			answer = false;
+		}
 		return answer;
 	}
-
-
+		
+		      
 	public static void main(String[] args) {
+		BasicOfString bos = new BasicOfString();
+		System.out.println(bos.solution("1a34"));
+		
+		String abc = "";
+		abc.toCharArray();
+		ddddddddddddddddddd;
+		
+		
+	}
+	
+}
+		      
+		
+		
 		
 
-	}
+	
 
-}
+
