@@ -14,6 +14,7 @@ public class BasicOfString {
 		boolean answer = true;
 		char[] charr = {};
 		String string = s;
+		
 		if (s.length() > 0 && s.length() < 9) {
 			charr = string.toCharArray();
 			for (int i = 0; i < string.length(); i++) {
@@ -35,3 +36,27 @@ public class BasicOfString {
 		System.out.println(bos.solution("1234567a"));
 	}
 }
+
+/* 프로그래머스 채점 + 11점나옴
+class Solution {
+	  public boolean solution(String s) {
+	      boolean answer = true;
+	      char[] charr = {};
+	      String string = s;
+	      if (s.length() == 4 || s.length() == 6) {
+	      if (s.length() > 0 && s.length() < 9) {
+	          charr = string.toCharArray();
+	          for(int i = 0; i < string.length(); i++) {
+	              int a = charr[i];
+	              if(a < 48 || a > 57) {
+	                  answer = false;
+	              }
+	          }
+	          
+	      }
+	          return answer;
+	      }
+	      return false;
+	  }
+	}
+*/
