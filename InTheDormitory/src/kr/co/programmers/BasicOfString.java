@@ -12,11 +12,11 @@ public class BasicOfString {
 // 그리고 숫자인지 문자인지를 알아야함, 모두 숫자여야 True
 	public boolean solution(String s) {
 		boolean answer = true;
-		char[] charr = {};
+//		char[] charr = {};
 		String string = s;
 		
 		if (s.length() > 0 && s.length() < 9) {
-			charr = string.toCharArray();
+			char[]charr = string.toCharArray();
 			for (int i = 0; i < string.length(); i++) {
 				int a = charr[i]; // 0 ~ 9 = 48 ~ 57
 				if (a < 48 || a > 57) {
@@ -33,7 +33,7 @@ public class BasicOfString {
 
 	public static void main(String[] args) {
 		BasicOfString bos = new BasicOfString();
-		System.out.println(bos.solution("1234567a"));
+		System.out.println(bos.solution("13456a78"));
 	}
 }
 
@@ -51,8 +51,7 @@ class Solution {
 	              if(a < 48 || a > 57) {
 	                  answer = false;
 	              }
-	          }
-	          
+	          }        
 	      }
 	          return answer;
 	      }

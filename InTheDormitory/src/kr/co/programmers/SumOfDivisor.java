@@ -14,13 +14,28 @@ public class SumOfDivisor { // 190417(수) 15분 걸림
 		int sum = 0;
 
 		if (n >= 0 && n <= 3000) {
-			for (int i = 1; i <= n; i++) {
+			for (int i = 1; i <= n; i++) { // for문 돌리는 회수를 줄이기 위해 n/2를 해도 됨
 				if (n % i == 0) {
 					sum += i;
 				}
 			}
 		}
 		int answer = sum;
+		return answer;
+	}
+	
+	public int solutionVersion2(int n) {
+
+		
+		int answer = 0;
+
+		if (n >= 0 && n <= 3000) {
+			for (int i = 1; i <= n; i++) { // for문 돌리는 회수를 줄이기 위해 n/2를 해도 됨
+				if (n % i == 0) {
+					answer += i;
+				}
+			}
+		}
 		return answer;
 	}
 
