@@ -7,47 +7,32 @@ package kr.co.programmers;
 //제한 사항
 //s는 길이 1 이상, 길이 8 이하인 문자열입니다.
 
-
 public class BasicOfString {
 // 일단 문자열의 수를 알아야함
 // 그리고 숫자인지 문자인지를 알아야함, 모두 숫자여야 True
 	public boolean solution(String s) {
 		boolean answer = true;
-		int string = 0;
+		char[] charr = {};
+		String string = s;
+		charr = string.toCharArray();
 		
-		for (int i = 0; i <= s.length(); i++) {
+		for (int i = 0; i < string.length(); i++) {
+		
+			int a = charr[i];  //0 ~ 9 = 48 ~ 57
 			
+			if (a < 47 && a > 58) {
+				answer = false;
+			}
+			if (a > 47 && a < 58) {
+				answer = true;
+			}
 		}
 		
-		
-		if (s.length() > 0 && s.length() < 9) {
-			string = Integer.parseInt(s);
-			answer = true;
-			
-		} else {
-			answer = false;
-		}
-		return answer;
+		return answer;	
 	}
-		
-		      
+
 	public static void main(String[] args) {
 		BasicOfString bos = new BasicOfString();
-		System.out.println(bos.solution("1a34"));
-		
-		String abc = "";
-		abc.toCharArray();
-		ddddddddddddddddddd;
-		
-		
+		System.out.println(bos.solution("abcd"));
 	}
-	
 }
-		      
-		
-		
-		
-
-	
-
-
