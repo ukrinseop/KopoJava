@@ -29,7 +29,7 @@ public class DBConnection2 {
 		 * 7. select문을 쿼리로 실행했으면 ResultSet을 이용하여 리턴받음 값을
 		 * 읽어내야함
 		 */
-
+		
 		Class.forName("oracle.jdbc.driver.OracleDriver"); // 문자열-패키지명.클래스명, reflection
 		// 문자열의 컬렉션을 인스턴스화 시켜줌, 문자열을 줘서 해당되는 것을 메모리에 올림..
 //		OracleDriver od = new OracleDriver(); 이렇게 하면 DB접속되면 계속 new됨; 메모리가 계속참 

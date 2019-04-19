@@ -6,8 +6,7 @@ import java.sql.PreparedStatement; //interface -> executeQuery() returning Resul
 import java.sql.ResultSet;
 // interface -> next() returning boolean ->getString() returning String <and> getInt() returning Int
 
-
-public class DBConnection {
+public class BasicDBConnection {
 	
 	Connection conn;      // prepareStatement("Query");
 	PreparedStatement ps; // executeQuery();
@@ -15,9 +14,9 @@ public class DBConnection {
 
 	public void connect() throws Exception {
 		
+		
 		Class.forName("oracle.jdbc.driver.OracleDriver");
 		String url = "jdbc:oracle:thin:@127.0.0.1:1521:XE";
-			
 		String user = "hr";
 		String password = "1234";
 		conn = DriverManager.getConnection(url, user, password);
@@ -52,7 +51,7 @@ public class DBConnection {
 	}
 
 	public static void main(String[] args) throws Exception {
-		DBConnection dbc = new DBConnection();
+		BasicDBConnection dbc = new BasicDBConnection();
 		dbc.connect();
 	}
 }
