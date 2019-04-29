@@ -14,8 +14,7 @@ public class BBSDaoImpl { // 쿼리문이 들어가있는 bbs 인터페이스
 
 	private static BBSDaoImpl bbs = new BBSDaoImpl();
 
-	private BBSDaoImpl() {
-	}
+	private BBSDaoImpl() {}
 
 	public static BBSDaoImpl getDBObject() {
 		if (bbs == null) {
@@ -24,9 +23,12 @@ public class BBSDaoImpl { // 쿼리문이 들어가있는 bbs 인터페이스
 		return bbs;
 	}
 
+//	------여기부터는  insert, select, update, delete-----------------------------
+	
+	
 	public void insertBBS(BBSDto article) { // 한번에 한 개의 레코드만 넣을 수 있음
 		try {
-			query = new StringBuilder();
+			query = new StringBuilder(); // StringBuilder query
 			query.append("INSERT INTO BBS VALUES(");
 			query.append("BBS_SEQ.NEXTVAL, ?, ?, ?, SYSDATE, ?)");
 			conn = DBconnSingleton2.getDBConn().getConnection();
@@ -87,7 +89,6 @@ public class BBSDaoImpl { // 쿼리문이 들어가있는 bbs 인터페이스
 		}
 	}
 	
-	
 	public void updateBBS(int ARTICLENUM) { // ID만 바꿀것
 		try {
 			query = new StringBuilder();
@@ -101,13 +102,11 @@ public class BBSDaoImpl { // 쿼리문이 들어가있는 bbs 인터페이스
 			ps.setInt(2, ARTICLENUM); // index 몇 번째 물음표
 			
 			ps.executeUpdate();
-			
-			
+					
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
 	
 	public void deleteBBS(int ARTICLENUM) { // ID만 바꿀것
 		try {
@@ -122,11 +121,9 @@ public class BBSDaoImpl { // 쿼리문이 들어가있는 bbs 인터페이스
 			ps.setInt(1, ARTICLENUM); // index 몇 번째 물음표
 			
 			ps.executeUpdate();
-			
-			
+					
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
 }

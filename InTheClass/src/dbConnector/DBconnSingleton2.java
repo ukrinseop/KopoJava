@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class DBconnSingleton2 {
+	
 	private static DBconnSingleton2 dst = new DBconnSingleton2();
 	
 	private DBconnSingleton2() {}
@@ -16,6 +17,27 @@ public class DBconnSingleton2 {
 		}
 		return dst;
 	}
+	/*
+	public class Singleton {
+
+		   private static Singleton singleton = new Singleton( );
+
+		    //A private Constructor prevents any other
+		    //class from instantiating.
+		    
+		   private Singleton() { }
+
+		   //static 'instance' method 
+		   public static Singleton getInstance( ) {
+		      return singleton;
+		   }
+
+		   //Other methods protected by singleton-ness 
+		   protected static void demoMethod( ) {
+		      System.out.println("demoMethod for singleton");
+		   }
+		} 
+	*/
 	
 	public Connection getConnection() {
 		Connection conn = null;
