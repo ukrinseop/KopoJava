@@ -5,7 +5,7 @@ import java.io.IOException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
-public class PloyTech_01 {
+public class PloyTech_01 { //¹«¤Ì
 
 	public static void main(String[] args) throws IOException {
 		Document doc = Jsoup.connect("http://news.naver.com/").get();
